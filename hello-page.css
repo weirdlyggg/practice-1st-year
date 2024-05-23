@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+
 *{
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
@@ -68,13 +69,49 @@ main {
     width: 300px;
     padding: 30px;
     background-color: #DCEDC8;
-    color: #212121;
+    color: #689F38;
     /* border-right: 1px solid #757575; */
     margin: 0;
 }
-.filter label{
+.filter label {
     display: block;
     margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px; /* Отступ для размещения кастомного чекбокса */
+    cursor: pointer;
+    user-select: none;
+    color: #689F38; /* Цвет текста */
+}
+/* Скрываем стандартные чекбоксы */
+.filter input[type="checkbox"] {
+    display: none;
+}
+/* Создаем кастомный чекбокс */
+.filter input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #689F38; /* Цвет границ */
+    border-radius: 4px; /* Закругленные углы */
+    background-color: transparent; /* Фон */
+}
+/* Стиль для активного чекбокса */
+.filter input[type="checkbox"]:checked + label:before {
+    background-color: #689F38; /* Цвет фона при отметке */
+}
+.filter input[type="checkbox"]:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 .filter h2 {
     margin-top: 0;
@@ -82,7 +119,7 @@ main {
 .content {
     flex-grow: 1;
     padding: 30px;
-    color: #212121;
+    color: #689F38;
 }
 .item {
     margin-bottom: 10px;
@@ -90,9 +127,9 @@ main {
 .footer {
     padding: 1.25rem 0;
     font-size: 0.8rem;
-    border-bottom: 5px solid #689F38;
+    border-top: 5px solid #689F38;
     background-color: #8BC34A;
-    color: #212121;
+    color: white;
 }
 .aside-btn {
     background-color: #8BC34A;

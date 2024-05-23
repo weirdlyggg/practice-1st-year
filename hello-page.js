@@ -1,10 +1,24 @@
 document.getElementById('filter-button').addEventListener('click', function() {
-    const checkedGenres = Array.from(document.querySelectorAll('input[name="genre"]:checked')).map(cb => cb.value);
-    const items = document.querySelectorAll('.item');
+    // Получаем все чекбоксы
+    const checkboxes = document.querySelectorAll('.filter input[type="checkbox"]');
+    const selectedGenres = [];
 
-    items.forEach(item => {
-        const itemGenres = item.dataset.genre.split(' ');
-        const isVisible = checkedGenres.length === 0 || checkedGenres.some(genre => itemGenres.includes(genre));
-        item.style.display = isVisible ? '' : 'none';
+    // Проходим по каждому чекбоксу и проверяем, отмечен ли он
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            selectedGenres.push(checkbox.value);
+        }
+    });
+
+    // Выводим выбранные жанры в консоль
+    console.log('Selected genres:', selectedGenres);
+
+    // Отображаем выбранные жанры на странице
+    const selectedGenresList = document.getElementById('selected-genres');
+    selectedGenresList.innerHTML = '';
+    selectedGenres.forEach((genre) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = genre;
+        selectedGenresList.appendChild(listItem);
     });
 });
