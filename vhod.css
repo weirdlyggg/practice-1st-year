@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+main {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    background-color: #dcedc8;
+}
+.main-image {
+    margin-right: 20px;
+}
+
+.main-image img {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+}
+
+.header {
+    padding: 1.25rem 0;
+    font-size: 1.5rem;
+    border-bottom: 5px solid #689F38;
+    background-color: #8BC34A;
+}
+.href{
+    text-decoration: none;
+    color: white;
+}
+/* .container {
+    max-width: 95%;
+    margin: 0 auto;
+} */
+.name {
+    margin-top: 15px;
+    color: white;
+}
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-top: 15px;
+}
+.main-menu li {
+    display: inline;
+    margin-right: 5px;
+    padding: 10px;
+}
+.main-menu {
+    display: inline;
+    margin-left: auto;
+}
+.footer {
+    padding: 1.25rem 0;
+    font-size: 0.8rem;
+    border-top: 5px solid #689F38;
+    background-color: #8BC34A;
+    color: white;
+}
+
+.p-blok {
+    color: #8BC34A;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 300px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.formreg2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    background-color: #8BC34A;
+    color: white;
+    border: none;
+    border-radius: 25px; 
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.button:hover {
+    background-color: #7CB342; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.button:active {
+    background-color: #689F38; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
