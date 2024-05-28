@@ -221,3 +221,24 @@ main {
     background-color: #689F38; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
+.btn-mw {
+    background-color: #8BC34A;
+    color: white;
+    border: none;
+    border-radius: 25px; 
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.btn-mw:hover {
+    background-color: #7CB342; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.btn-mw:active {
+    background-color: #689F38; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
